@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarLayoutFloatingInline from '@/components/navbar/NavbarLayoutFloatingInline';
@@ -107,7 +107,7 @@ export default function LandingPage() {
               imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_32m5rRdd38TAyU0DZCqvrl288SF/uploaded-1763890404434-6ru59qez.jpg",
               button: { text: "View Details", href: "#" }
             }
-          ]
+          ]}
           gridVariant="three-columns-all-equal-width"
           animationType="slide-up"
           textboxLayout="default"

@@ -14,6 +14,10 @@ import FooterLogoEmphasis from '@/components/sections/footer/FooterLogoEmphasis'
 import { Sparkles, Home, Star, Building2, Award, MapPin, Palette, Leaf, Heart, Tag } from "lucide-react";
 
 export default function LandingPage() {
+  const handleRoomClick = (roomId: string) => {
+    alert(`Opening booking modal for room ${roomId}`);
+  };
+
   return (
     <ThemeProvider
       defaultButtonVariant="expand-hover"
@@ -68,9 +72,9 @@ export default function LandingPage() {
           tag="Premium Accommodations"
           tagIcon={Home}
           products={[
-            { id: "1", name: "Deluxe Room", price: "from $199/night", imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_32m5rRdd38TAyU0DZCqvrl288SF/uploaded-1763890402787-2y9sxqrz.jpg", imageAlt: "Deluxe room" },
-            { id: "2", name: "Ocean View Suite", price: "from $299/night", imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_32m5rRdd38TAyU0DZCqvrl288SF/uploaded-1763890400213-zyb4n9h2.jpg", imageAlt: "Ocean view suite" },
-            { id: "3", name: "Presidential Suite", price: "from $599/night", imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_32m5rRdd38TAyU0DZCqvrl288SF/uploaded-1763890400734-3h3c85jd.jpg", imageAlt: "Presidential suite" }
+            { id: "1", name: "Deluxe Room", price: "from $199/night", imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_32m5rRdd38TAyU0DZCqvrl288SF/uploaded-1763890402787-2y9sxqrz.jpg", imageAlt: "Deluxe room", onProductClick: () => handleRoomClick("1") },
+            { id: "2", name: "Ocean View Suite", price: "from $299/night", imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_32m5rRdd38TAyU0DZCqvrl288SF/uploaded-1763890400213-zyb4n9h2.jpg", imageAlt: "Ocean view suite", onProductClick: () => handleRoomClick("2") },
+            { id: "3", name: "Presidential Suite", price: "from $599/night", imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_32m5rRdd38TAyU0DZCqvrl288SF/uploaded-1763890400734-3h3c85jd.jpg", imageAlt: "Presidential suite", onProductClick: () => handleRoomClick("3") }
           ]}
           gridVariant="three-columns-all-equal-width"
           animationType="slide-up"
@@ -103,7 +107,7 @@ export default function LandingPage() {
               imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_32m5rRdd38TAyU0DZCqvrl288SF/uploaded-1763890404434-6ru59qez.jpg",
               button: { text: "View Details", href: "#" }
             }
-          ]}
+          ]
           gridVariant="three-columns-all-equal-width"
           animationType="slide-up"
           textboxLayout="default"
